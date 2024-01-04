@@ -1,0 +1,132 @@
+.hero {
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  // padding: 40px;
+
+  @include breakpoint-down(xsmall){
+    height: -webkit-fill-available;
+  }
+  
+}
+
+.hero-text-container {
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+  // padding: 10px 0;
+  position: relative;
+  height: 100px;
+
+  .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 32s linear infinite;
+    animation: marquee 32s linear infinite;
+  
+    .hero-text {
+      gap: 40px;
+      pointer-events: none;
+
+      .ticker-text {
+        flex:none;
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+// .marquee__inner {
+// 	animation: marquee 15s linear infinite;
+// 	will-change: transform;
+//   position: relative;
+
+//   :hover {
+
+//   }
+// }
+
+
+.video-container {
+  width: 400px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @include breakpoint-down(medium){
+    width: 340px;
+  }
+
+  @include breakpoint-up(xlarge){
+    width: 30%;
+  }
+
+  
+
+  video {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+// .track:hover ~ .video-container {
+//   // animation-play-state: paused;
+//   // z-index: 1000;
+//   mix-blend-mode: color-burn;
+// }
+
+.link {
+  position: relative;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  transform-origin: 100% 50%;
+  // transform: scale3d(0, 1, 1);
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+
+.link:hover:before {
+  transform-origin: 0% 50%;
+  transform: scale(1);
+  // transition: transform 0.3s;
+}
+
+
+// .link::before, .link::after {
+//   position: absolute;
+//   width: 100%;
+//   height: 1px;
+//   background: currentColor;
+//   top: 100%;
+//   left: 0;
+//   // pointer-events: none;
+// }
+
+// .link::after, .link::before {
+//   box-sizing: border-box;
+// }
+
+
+.centred-detail {
+
+  @include breakpoint-down(medium){
+    display: none;
+  }
+
+}

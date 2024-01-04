@@ -1,0 +1,357 @@
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("/fonts/PPEditorialOld-Ultralight.otf");
+}
+
+@font-face {
+  font-family: "PP NeueMontreal";
+  src: url("/fonts/PPNeueMontreal-Book.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PP NeueMontreal";
+  src: url("/fonts/PPNeueMontreal-Medium.otf");
+  font-weight: medium;
+}
+
+.theme1 {
+  ---background: #F7EBEB;
+  ---text: #211D20;
+  ---cursor: orange;
+}
+
+.theme2 {
+  ---background: #2C574D;
+  ---text: #E6E3C2;
+  ---cursor: black;
+}
+
+.theme3 {
+  ---background: #E3DC9D;
+  ---text: #572C50;
+  ---cursor: black;
+}
+
+.theme4 {
+  ---background: #74433D;
+  ---text: #DEC6AA;
+  ---cursor: black;
+}
+
+.theme5 {
+  ---background: #4A364D;
+  ---text: #FFD4D4;
+  ---cursor: black;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Reset CSS styles */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* Background */
+body {
+  background-color: var(---background);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* Typography */
+h1, h2, h3, h4, p, a {
+  color: var(---text);
+  font-family: 'PP NeueMontreal', sans-serif;
+  font-size: 0.7rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+h1, h2, h3, h4, p {
+  pointer-events: none;
+}
+
+h2 {
+  font-family: 'PP Editorial New', serif;
+  font-size: 5rem;
+  text-transform: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Icons */
+/* Nav */
+nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+  position: absolute;
+  width: 100%;
+}
+
+@media (max-width: 63.9375em) {
+  nav {
+    padding: 24px;
+  }
+}
+
+nav ul {
+  gap: 40px;
+}
+
+nav #wave {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (max-width: 63.9375em) {
+  nav #wave {
+    display: none;
+  }
+}
+
+#wave-mobile {
+  display: none;
+}
+
+@media (max-width: 63.9375em) {
+  #wave-mobile {
+    display: block;
+    padding-right: 12px;
+    width: 32px;
+  }
+}
+
+footer {
+  bottom: 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+  position: absolute;
+  width: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (max-width: 63.9375em) {
+  footer {
+    padding: 24px;
+  }
+}
+
+footer ul {
+  gap: 16px;
+}
+
+footer .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer .details h3 {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+footer .details .centred-detail {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+/* Cursor */
+.cursor {
+  width: 20px;
+  height: 20px;
+  background-color: var(---cursor);
+  position: fixed;
+  pointer-events: none;
+  border-radius: 100%;
+  mix-blend-mode: divide;
+}
+
+.hero {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 25em) {
+  .hero {
+    height: -webkit-fill-available;
+  }
+}
+
+.hero-text-container {
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  height: 100px;
+}
+
+.hero-text-container .track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  -webkit-animation: marquee 32s linear infinite;
+          animation: marquee 32s linear infinite;
+  animation: marquee 32s linear infinite;
+}
+
+.hero-text-container .track .hero-text {
+  gap: 40px;
+  pointer-events: none;
+}
+
+.hero-text-container .track .hero-text .ticker-text {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+@-webkit-keyframes marquee {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.video-container {
+  width: 400px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 63.9375em) {
+  .video-container {
+    width: 340px;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .video-container {
+    width: 30%;
+  }
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+}
+
+.link {
+  position: relative;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.link:hover:before {
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+@media (max-width: 63.9375em) {
+  .centred-detail {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

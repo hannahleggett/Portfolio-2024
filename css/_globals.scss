@@ -1,0 +1,161 @@
+/* Reset CSS styles */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+/* Background */
+
+body {
+    background-color: var(---background);
+		transition: all 1s ease;
+}
+
+
+/* Typography */
+
+h1, h2, h3, h4, p, a {
+    color: var(---text);
+    font-family: 'PP NeueMontreal', sans-serif;
+		font-size: $font-sm;
+		font-weight: normal;
+		text-transform: uppercase;
+		letter-spacing: 1.4px;
+}
+
+h1, h2, h3, h4, p {
+	pointer-events: none;
+}
+
+h1 {
+	
+}
+
+h2{
+	font-family: 'PP Editorial New', serif;
+	font-size: $font-lg;
+	text-transform: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Icons */
+
+/* Nav */
+
+nav {
+	justify-content: space-between;
+	padding: 40px;
+	position: absolute;
+	width: 100%;
+
+	@include breakpoint-down(medium){
+    padding: 24px;
+  }
+
+	ul {
+		gap: 40px;
+	}
+
+	#wave {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@include breakpoint-down(medium){
+			display: none;
+		}
+	}
+}
+
+#wave-mobile {
+	display: none;
+
+	@include breakpoint-down(medium){
+		display: block;
+		padding-right:12px;
+		width: 32px;
+	}
+}
+
+footer {
+	bottom: 0px;
+	justify-content: space-between;
+	padding: 40px;
+	position: absolute;
+	width: 100%;
+	align-items: flex-end;
+
+	@include breakpoint-down(medium){
+    padding: 24px;
+  }
+
+	ul {
+		gap: 16px;
+	}
+
+	.details {
+		display: flex;
+		gap: 40%;
+		align-items: flex-end;
+
+		h3 {
+			flex:none;
+		}
+
+		.centred-detail{
+				position: absolute;
+				left: 50%;
+				// transform: translateX(-200px);
+				transform: translateX(-50%);
+		}
+
+	}
+}
+
+/* Cursor */
+
+.cursor {
+	width: 20px;
+	height: 20px;
+	background-color: var(---cursor);
+	position: fixed;
+	pointer-events: none;
+	border-radius: 100%;
+	mix-blend-mode: divide;
+}
+
