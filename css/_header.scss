@@ -74,14 +74,33 @@
     width: 100%;
     height: 100%;
     transition: transform 0.3s ease-in;
+  }
 
-    &:hover{
-      transform: scale(102%);
-      transition: transform 0.3s ease-in;
-    }
+  .videohover {
+    transform: scale(102%);
+    transition: transform 0.3s ease-in;
   }
 }
 
+#video {
+  @include breakpoint-down(medium){
+    display: none;
+  }
+
+  @include breakpoint-up(large){
+    display:block;
+  }
+}
+
+#video-mobile {
+  @include breakpoint-down(medium){
+    display: block;
+  }
+
+  @include breakpoint-up(large){
+    display:none;
+  }
+}
 
 // .track:hover ~ .video-container {
 //   // animation-play-state: paused;

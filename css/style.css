@@ -324,13 +324,37 @@ footer .details .centred-detail {
   transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 
-.video-container video:hover {
+.video-container .videohover {
   -webkit-transform: scale(102%);
           transform: scale(102%);
   -webkit-transition: -webkit-transform 0.3s ease-in;
   transition: -webkit-transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
   transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+@media (max-width: 63.9375em) {
+  #video {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  #video {
+    display: block;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  #video-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 64em) {
+  #video-mobile {
+    display: none;
+  }
 }
 
 .link {

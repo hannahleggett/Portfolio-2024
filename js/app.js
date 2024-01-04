@@ -1,22 +1,34 @@
 /////////////////////////////// Video Pause /////////////////////////////
 
-vid = document.getElementById('video')
+vid = document.getElementById('video');
+vidMob = document.getElementById('video-mobile');
 
 // console.log(vid)
 
 vid.addEventListener("mouseover", pauseVid);
 vid.addEventListener("mouseout", playVid);
 
+vidMob.addEventListener("touchstart", pauseMob);
+vidMob.addEventListener("touchend", playMob);
+// vidMob.addEventListener("touchstart", playVid);
+
+
 function pauseVid(e) { 
   vid.pause(); 
-  console.log('in')
+  vid.classList.add('videohover')
 }
 
 function playVid(e) { 
   vid.play(); 
-  console.log('out')
+  vid.classList.remove('videohover')
 }
 
-// vid.addEventListener("mouseout", function (e) { 
-//   vid.play(); 
-// }) 
+function pauseMob(e) { 
+  vidMob.pause(); 
+  vidMob.classList.add('videohover')
+}
+
+function playMob(e) { 
+  vidMob.play(); 
+  vidMob.classList.remove('videohover')
+}
