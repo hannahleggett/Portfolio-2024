@@ -258,6 +258,7 @@ footer .details .centred-detail {
   -webkit-animation: marquee 32s linear infinite;
           animation: marquee 32s linear infinite;
   animation: marquee 32s linear infinite;
+  padding: 10px 0px;
 }
 
 .hero-text-container .track .hero-text {
