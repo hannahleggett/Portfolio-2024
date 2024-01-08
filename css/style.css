@@ -247,8 +247,9 @@ footer .details .centred-detail {
   width: 100vw;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: visible;
   position: relative;
-  height: 100px;
+  height: 120px;
 }
 
 .hero-text-container .track {
@@ -258,7 +259,6 @@ footer .details .centred-detail {
   -webkit-animation: marquee 32s linear infinite;
           animation: marquee 32s linear infinite;
   animation: marquee 32s linear infinite;
-  padding: 10px 0px;
 }
 
 .hero-text-container .track .hero-text {
