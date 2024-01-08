@@ -248,6 +248,7 @@ footer .details .centred-detail {
   max-width: 100%;
   overflow-x: hidden;
   overflow-y: visible;
+  padding: 10px 0;
   position: relative;
   height: 120px;
 }
