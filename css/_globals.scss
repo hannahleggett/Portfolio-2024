@@ -159,3 +159,7 @@ footer {
 	mix-blend-mode: divide;
 }
 
+
+video::-internal-media-controls-overlay-cast-button {
+	display: none;
+};

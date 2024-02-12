@@ -226,6 +226,10 @@ footer .details .centred-detail {
   mix-blend-mode: divide;
 }
 
+video::-internal-media-controls-overlay-cast-button {
+  display: none;
+}
+
 .hero {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
