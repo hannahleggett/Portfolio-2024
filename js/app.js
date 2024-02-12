@@ -1,7 +1,7 @@
 /////////////////////////////// Video Pause /////////////////////////////
 
-vid = document.getElementById('video');
-vidMob = document.getElementById('video-mobile');
+let vid = document.getElementById('video');
+let vidMob = document.getElementById('video-mobile');
 
 // console.log(vid)
 

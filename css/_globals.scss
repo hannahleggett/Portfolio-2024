@@ -150,13 +150,33 @@ footer {
 /* Cursor */
 
 .cursor {
-	width: 20px;
-	height: 20px;
-	background-color: var(---cursor);
+	width: 10px;
+	height: 10px;
+	background-color: white;
 	position: fixed;
 	pointer-events: none;
 	border-radius: 100%;
-	mix-blend-mode: divide;
+	mix-blend-mode: difference;
+	transform: translate(-50%, -50%);
+	z-index: 999;
+	transition: all 0.3s ease;
+	transition-property: background, transform ;
+	transform-origin: 75% 75%;
+}
+
+@media (max-width: 800px) {
+	.cursor {
+		display: none;
+	}
+}
+
+.link-grow {
+  transform: scale(4);
+}
+
+.video-grow {
+  transform: scale(10);
+	transform-origin: 55% 55%;
 }
 
 
